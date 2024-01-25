@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorRange</title>
+    <style>
+        label, p{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <label for="red">Red</label>
+    <input id="red" type="range" min="0" max="255">
+    <br><br>
+    <label for="green">Green</label>
+    <input id="green" type="range" min="0" max="255">
+    <br><br>
+    <label for="blue">Blue</label>
+    <input id="blue" type="range" min="0" max="255">
+    <br><br>
+    <p id="paragraph">Change the 3 Color Ranges above and observe my color Change</p>
+    <script>
+        let red = document.getElementById("red");
+        let green = document.getElementById("green");
+        let blue = document.getElementById("blue");
+        let p = document.getElementById("paragraph");
+
+        red.addEventListener("input", updateColor);
+        green.addEventListener("input", updateColor);
+        blue.addEventListener("input", updateColor);
+
+        function updateColor() {
+            let redValue = red.value;
+            let greenValue = green.value;
+            let blueValue = blue.value;
+            paragraph.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+        }
+    </script>
+</body>
+</html>

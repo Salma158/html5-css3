@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Forms Vaildation</title>
+</head>
+<body>
+    <form action="" >
+        <h1>Change Email Address</h1>
+        <input type="text" name="Username" placeholder="Username" autocomplete="off" autofocus="on"
+        pattern="[a-zA-Z]" title="the required Username may only be a series of alphabetical characters"
+        required>
+        <br><br>
+        <input type="email" name="email" placeholder="Email" autocomplete="off"
+        pattern="[a-zA-Z0-9]{5,10}@(gmail|yahoo).com" required>
+        <br><br>
+        <button type="submit" >Change</button>
+    </form>
+</body>
+</html>
